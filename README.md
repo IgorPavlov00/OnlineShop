@@ -22,6 +22,8 @@ An e-commerce web application built with Angular. Users can register, log in, br
 - **Chatbot**: Rasa AI (Python) for product inquiries.
 - **Tools**: TypeScript, SCSS, ESLint, Prettier.
 
+  here is a working demo:https://onlineshop123.netlify.app/
+
 ![image](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013)
 ![image](https://github.com/user-attachments/assets/7fb673d5-0126-492a-b03e-1dd17af06550)
 
