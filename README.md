@@ -1,29 +1,48 @@
-# Online Shop - Angular
+# 🛍️ Online Shop - Angular  
 
-An e-commerce web application built with Angular. Users can register, log in, browse products, add items to cart, update profiles, leave comments, and view statistics. The app also includes a **Rasa AI chatbot** for product inquiries.
-
----
-
-## Features
-
-- **User Authentication**: Register, log in, and update profiles.
-- **Product Management**: Browse, filter, and view product details.
-- **Shopping Cart**: Add/remove items, update quantities, and checkout.
-- **Comments & Reviews**: Leave and view product reviews.
-- **Profile Management**: Update profile info, upload pictures, and view stats.
-- **AI Chatbot**: A Rasa AI-powered chatbot to answer product-related questions.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/.../deploy-status)](https://app.netlify.com/sites/onlineshop123/deploys)  
+*A modern e-commerce platform with AI-powered support.*
 
 ---
 
-## Technologies Used
+## 🌟 Features  
+- **🔐 User Authentication**: Secure registration, login, and profile updates.  
+- **📦 Product Management**: Browse, filter, and view detailed product listings.  
+- **🛒 Shopping Cart**: Add/remove items, adjust quantities, and checkout seamlessly.  
+- **💬 Reviews & Comments**: Share feedback and read customer reviews.  
+- **👤 Profile Management**: Update user details, upload avatars, and track activity stats.  
+- **🤖 AI Chatbot**: Integrated Rasa AI assistant for instant product support.  
 
-- **Frontend**: Angular, Angular Material, RxJS.
-- **Backend**: Firebase (Auth, Firestore, Storage) or Node.js/Express with MongoDB.
-- **Chatbot**: Rasa AI (Python) for product inquiries.
-- **Tools**: TypeScript, SCSS, ESLint, Prettier.
+---
 
-  here is a working demo:https://onlineshop123.netlify.app/
+## 🛠️ Technologies  
+**Frontend**  
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)  
+![Angular Material](https://img.shields.io/badge/Angular_Material-3F51B5?style=flat&logo=angular&logoColor=white)  
+**Backend** (Choose one):  
+- ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black) (Auth, Firestore, Storage)  
+- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) + ![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white) + ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)  
+**Chatbot**  
+![Rasa](https://img.shields.io/badge/Rasa-5A17EE?style=flat&logo=rasa&logoColor=white)  
+**Tools**  
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)  
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white)  
 
-![image](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013)
-![image](https://github.com/user-attachments/assets/7fb673d5-0126-492a-b03e-1dd17af06550)
+---
 
+## 🚀 Demo  
+Explore the live app here: [Online Shop Demo](https://onlineshop123.netlify.app/)  
+
+---
+
+## 📸 Screenshots  
+| Product Page | AI Chatbot |  
+|--------------|------------|  
+| ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot](https://github.com/user-attachments/assets/7fb673d5-0126-492a-b03e-1dd17af06550) |  
+
+---
+
+## 🏁 Getting Started  
+1. **Clone the repository**  
+   ```bash  
+   git clone https://github.com/your-username/online-shop-angular.git  
