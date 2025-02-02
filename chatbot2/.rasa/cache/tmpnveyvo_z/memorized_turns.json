@@ -1,0 +1,11 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJwti00KgCAQRq8yB5CorVcRkbApBmoMHduId28id9/Pe651A+3O+IQ1CiW20P4QeL3QwignFUFWtpxJiv2UtNUoFtwyzV6PWjDrjiwkhIq4gXgDxCore6CEsQbiPfXuXzdKMFI=": "action_get_product_info",
+    "eJytjjEKgDAMRa+SA4jo2quUUqRGCWgqbXQp3t2I3Vwc3JL/3yOx5WygbAkPPwShyAbKM3geVjRQl4WyICublyjZ3Eoc9yAGbN92Tos9Y9IcWUgIFbEVcQ0Qq6zsjOJr6omneH47/tJ+f8NdIAxjDw==": "action_listen",
+    "eJwti0sKgDAMBa+SA4jotlcpJRQNEmhTsdFN6d2N2N37zPjWJ2jnRQ/GTbmIg/YHlJjJwSiJq5IYW1PR6j6l7PemDvw6L8GOu9JlO4myMhniBxImYDHZ2IMUx4qc40G9hxdnjDCp": "action_get_product_image",
+    "eJytjjEKgDAMRa+SA4jo2quUUooGCbSp2OhSvLsRu7k4uCX/v0di69lBXTc8fJiEMhuoz+A5JDTQlkhFkJUtMUsxt5LnfRIDduwHp8VecNMcWUgIFbENcR0Qq6zsguJb6imFBc9v19/e/4+4C0NEZBQ=": "action_listen",
+    "eJwti00KgCAQha8yB5CorVcREbEhBmwMndqId28iV+/ve64PA/2q+ISYhApb6L8JHE+0MEOmJsjKtlyk2e9S9juJBbctq9fhbli1RxYSQkXcRLwBYj0re6CE2apSwjH8C2gDMLk=": "action_get_product_price",
+    "eJytjjEKgDAMRa+SAxTRtVcppUgNEtBUbOpSvLsRu7k4OCX5eY/E1dNA3XY8whiFEluoTxN4XNFCGxbKgqxsXpJkeytpKlEsuKHrvS5Kxl1zZCEhVMQ1xBsgVlnZGSW0VCtFPL9df3v/P+IvUklkRA==": "action_listen"
+  }
+}

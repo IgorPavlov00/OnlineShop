@@ -1,0 +1,45 @@
+<div class="home" *ngIf="!isChatOpen">
+  <button (click)="openChat()" class="chat-button">
+    <img src="https://media.istockphoto.com/id/1010001882/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=1jeAr9KSx3sG7SKxUPR_j8WPSZq_NIKL0P-MA4F1xRw=" alt="Chat Icon">
+  </button>
+</div>
+
+<div class="chat" *ngIf="isChatOpen">
+  <div class="chat-title">
+    <button class="close-button" (click)="closeChat()">x</button>
+    <h1>Ask anything!</h1>
+<!--    <h2>Agent</h2>-->
+    <figure class="avatar">
+      <img src="https://t3.ftcdn.net/jpg/02/15/61/92/360_F_215619203_9mmrDaPnSHOUBfz9XVkjBAknw5XFEK0D.jpg" alt="Avatar Icon" width="40px" height="40px" style="border-radius: 50%">
+    </figure>
+  </div>
+  <div class="messages">
+    <div class="messages-content">
+      <div *ngFor="let message of messages" class="message" [class]="message.sender">
+        <div *ngIf="message.sender === 'bot'" class="message-wrapper">
+          <img class="avatar icon" src="https://t3.ftcdn.net/jpg/02/15/61/92/360_F_215619203_9mmrDaPnSHOUBfz9XVkjBAknw5XFEK0D.jpg" alt="Bot Icon">
+          <div class="message-text">
+            {{ message.text }}
+
+            <div *ngIf="message.imageUrl">
+              <img [src]="message.imageUrl" alt="Product Image" class="message-image">
+            </div>
+            <div *ngIf="message.link">
+              <a [href]="message.link" target="_blank" style="color: white;text-decoration: none">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="message.sender === 'user'" class="message-wrapper">
+          <div class="message-text">{{ message.text }}</div>
+          <img class="avatar icon" src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png" alt="User Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="message-box">
+    <textarea type="text" class="message-input" placeholder="Type message..." [(ngModel)]="userInput" (keyup.enter)="sendMessage()"></textarea>
+    <button type="submit" class="message-submit" (click)="sendMessage()">Send</button>
+  </div>
+</div>

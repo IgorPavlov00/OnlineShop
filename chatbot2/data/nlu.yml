@@ -1,0 +1,159 @@
+version: "3.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey there
+
+  - intent: ask_product_info
+    examples: |
+      - Tell me about [Cotton T-shirt](product)
+      - I want to know more about [Black T-shirt](product)
+      - What can you tell me about [Stylish blue Jeans](product)?
+      - Details on [Slim fit Jeans](product), please
+      - Show me details for [Winter Jacket](product)
+      - What are the specs of [Summer Jacket](product)?
+      - Tell me about [Running Sneakers](product)
+      - I want to know more about [Casual Sneakers](product)
+      - What can you tell me about [Evening Dress](product)?
+      - Details on [Summer Dress](product), please
+      - Show me details for [Stylish Cap](product)
+      - What are the specs of [Baseball Cap](product)?
+      - Tell me about [Wool Scarf](product)
+      - I want to know more about [Summer Scarf](product)
+      - What can you tell me about [Sunglasses](product)?
+      - Details on [Watch](product), please
+      - Show me details for [Backpack](product)
+      - What are the specs of [Hat](product)?
+      - Tell me about [Belt](product)
+      - I want to know more about [Gloves](product)
+      - What can you tell me about [Running Shoes](product)?
+      - Details on [Gym T-Shirt](product), please
+      - Show me details for [Leather Jacket](product)
+      - What are the specs of [Formal Shoes](product)?
+      - Tell me about [Green Dress](product)
+      - I want to know more about [Sneakers](product)
+      - What can you tell me about [Polo T-Shirt](product)?
+      - Details on [Denim Jeans](product), please
+      - Show me details for [Hiking Boots](product)
+      - What are the specs of [Beanie Hat](product)?
+      - Show me some [Jackets](product)
+      - Show me some [Shoes](product)
+      - Show me some [Dresses](product)
+      - I want to see [Jeans](product)
+      - I want to see some [Jackets](product)
+      - Can you show me [Jackets](product)?
+      - Show me [Sneakers](product)
+      - Tell me about [Jacket](product)
+      - What about some [Jackets](product)?
+      - Do you have [Jackets](product) available?
+
+      # Just product names
+      - [Cotton T-shirt](product)
+      - [Black T-shirt](product)
+      - [Stylish blue Jeans](product)
+      - [Slim fit Jeans](product)
+      - [Winter Jacket](product)
+      - [Summer Jacket](product)
+      - [Running Sneakers](product)
+      - [Casual Sneakers](product)
+      - [Evening Dress](product)
+      - [Summer Dress](product)
+      - [Stylish Cap](product)
+      - [Baseball Cap](product)
+      - [Wool Scarf](product)
+      - [Summer Scarf](product)
+      - [Sunglasses](product)
+      - [Watch](product)
+      - [Backpack](product)
+      - [Hat](product)
+      - [Belt](product)
+      - [Gloves](product)
+      - [Running Shoes](product)
+      - [Gym T-Shirt](product)
+      - [Leather Jacket](product)
+      - [Formal Shoes](product)
+      - [Green Dress](product)
+      - [Sneakers](product)
+      - [Polo T-Shirt](product)
+      - [Denim Jeans](product)
+      - [Hiking Boots](product)
+      - [Beanie Hat](product)
+      - [Jackets](product)
+      - [Dresses](product)
+
+  - intent: confirm_order
+    examples: |
+      - I would like to order [Denim Jeans](product)
+      - Please place an order for [Sneakers](product)
+      - Can I order [Winter Jacket](product)?
+      - Order [Leather Jacket](product)
+      - I want to buy [Jacket](product)
+      - Order [Jeans](product)
+
+  - intent: ask_product_by_price
+    examples: |
+      - Show me products under [$50](max_price)
+      - Can you show me items above [$100](min_price)?
+      - I want to see products between [$30](min_price) and [$70](max_price)
+      - What can I buy for less than [$20](max_price)?
+      - Show me items that cost more than [$200](min_price)
+      - I’m looking for products priced under [$75](max_price)
+      - Do you have any items above [$150](min_price)?
+      - Find me products between [$40](min_price) and [$90](max_price)
+      - Are there any items that cost less than [$25](max_price)?
+      - Show me products costing more than [$300](min_price)
+      - Can I find items priced below [$60](max_price)?
+      - Display items that are above [$80](min_price)
+      - What items are available between [$50](min_price) and [$100](max_price)?
+      - I want to see products under [$150](max_price)
+      - Show me some items that are more than [$120](min_price)
+      - Are there any products between [$10](min_price) and [$40](max_price)?
+      - Find products less than [$200](max_price)
+      - Can you show items over [$500](min_price)?
+      - I'm interested in products that are below [$30](max_price)
+      - Show me items in the price range of [$25](min_price) to [$75](max_price)
+      - What can I buy for more than [$50](min_price)?
+      - Show me products that are under [$45](max_price)
+      - What items cost between [$100](min_price) and [$200](max_price)?
+      - Find items that cost more than [$70](min_price)
+      - Are there any items priced below [$90](max_price)?
+      - What can I buy between [$20](min_price) and [$50](max_price)?
+      - Show me items costing more than [$250](min_price)
+      - Find products under [$35](max_price)
+      - Are there any items between [$60](min_price) and [$120](max_price)?
+      - Show me options over [$40](min_price) and under [$80](max_price)
+      - Find items that are more than [$20](min_price) but less than [$100](max_price)
+
+entities:
+  - min_price
+  - max_price
+
+  - lookup: product
+    examples: |
+      - jacket
+      - jackets
+      - jeans
+      - jean
+      - t-shirt
+      - t-shirts
+      - shoes
+      - shoe
+      - sneaker
+      - sneakers
+      - dress
+      - dresses
+      - cap
+      - caps
+      - hat
+      - hats
+
+  - synonym: jacket
+    examples: |
+      - jackets
+
+  - synonym: dress
+    examples: |
+      - dresses

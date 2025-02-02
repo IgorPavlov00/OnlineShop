@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Khand', sans-serif;
+}
+.search-form {
+  margin-top: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group button {
+  padding: 5px;
+  font-size: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-top: 20px; /* Adjust to align button vertically */
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
+
+/* Clothing List Styling */
+.clothing-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.clothing-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 250px; /* Adjust width as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #fff; /* Ensure background color for better visibility */
+}
+
+.clothing-item:hover {
+  transform: scale(1.05);
+}
+
+.clothing-image {
+  width: 100%;
+  height: auto;
+}
+
+.clothing-item-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.clothing-item-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.clothing-item-price {
+  font-size: 16px;
+  color: #333;
+}
+
+.view-details-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-details-button:hover {
+  background-color: #218838;
+}

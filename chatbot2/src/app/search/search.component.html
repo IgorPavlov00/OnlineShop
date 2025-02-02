@@ -1,0 +1,52 @@
+<div class="search-form">
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="searchCriteria.name">
+  </div>
+  <div class="form-group">
+    <label>Description:</label>
+    <input type="text" [(ngModel)]="searchCriteria.description">
+  </div>
+  <div class="form-group">
+    <label>Type:</label>
+    <input type="text" [(ngModel)]="searchCriteria.type">
+  </div>
+  <div class="form-group">
+    <label>Size:</label>
+    <input type="text" [(ngModel)]="searchCriteria.size">
+  </div>
+  <div class="form-group">
+    <label>Manufacturer:</label>
+    <input type="text" [(ngModel)]="searchCriteria.manufacturer">
+  </div>
+  <div class="form-group">
+    <label>From Date:</label>
+    <input type="date" [(ngModel)]="searchCriteria.fromDate">
+  </div>
+  <div class="form-group">
+    <label>To Date:</label>
+    <input type="date" [(ngModel)]="searchCriteria.toDate">
+  </div>
+  <div class="form-group">
+    <label>Min Price:</label>
+    <input type="number" [(ngModel)]="searchCriteria.minPrice">
+  </div>
+  <div class="form-group">
+    <label>Max Price:</label>
+    <input type="number" [(ngModel)]="searchCriteria.maxPrice">
+  </div>
+  <div class="form-group">
+    <button (click)="search()">Search</button>
+  </div>
+</div>
+
+<div class="clothing-list">
+  <div *ngFor="let item of clothingItems" class="clothing-item">
+    <img [src]="item.imageUrl" alt="{{ item.name }}" class="clothing-image">
+    <div class="clothing-item-details">
+      <h2 class="clothing-item-title">{{ item.name }}</h2>
+      <p class="clothing-item-price">{{ item.price | currency }}</p>
+      <button class="view-details-button" (click)="viewDetails(item.id)">View Details</button>
+    </div>
+  </div>
+</div>

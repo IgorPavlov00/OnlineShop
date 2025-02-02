@@ -1,0 +1,270 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="wrapper">
+  <div class="search-form">
+    <!-- Existing form fields for other search criteria -->
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="searchCriteria.name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Description:</label>
+      <input type="text" [(ngModel)]="searchCriteria.description" name="description">
+    </div>
+    <div class="form-group">
+      <label>Type:</label>
+      <select [(ngModel)]="searchCriteria.type" name="type">
+        <option value="">Select Type</option>
+        <option value="Casual">Casual</option>
+        <option value="Outerwear">Outerwear</option>
+        <option value="Footwear">Footwear</option>
+        <option value="Formal">Formal</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Size:</label>
+      <select [(ngModel)]="searchCriteria.size" name="size">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="One Size">One Size</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Manufacturer:</label>
+      <select [(ngModel)]="searchCriteria.manufacturer" name="manufacturer">
+        <option value="">Select Manufacturer</option>
+        <option value="Brand A">Brand A</option>
+        <option value="Brand B">Brand B</option>
+        <option value="Brand C">Brand C</option>
+        <option value="Brand D">Brand D</option>
+        <option value="Brand E">Brand E</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>From Date:</label>
+      <input type="date" [(ngModel)]="searchCriteria.fromDate" name="fromDate">
+    </div>
+    <div class="form-group">
+      <label>To Date:</label>
+      <input type="date" [(ngModel)]="searchCriteria.toDate" name="toDate">
+    </div>
+    <div class="form-group">
+      <label>Min Price:</label>
+      <input type="number" [(ngModel)]="searchCriteria.minPrice" name="minPrice">
+    </div>
+    <div class="form-group">
+      <label>Max Price:</label>
+      <input type="number" [(ngModel)]="searchCriteria.maxPrice" name="maxPrice">
+    </div>
+    <div class="form-group">
+      <button (click)="search()" style="margin-top: 35px">Search</button>
+    </div>
+  </div>
+
+  <div id="mobile-filter">
+    <div class="py-3">
+      <h5 class="font-weight-bold">Brands</h5>
+      <form class="brand">
+        <div class="form-inline d-flex align-items-center py-1">
+          <label class="tick">Brand A
+            <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand A']" (change)="applyFilters()" name="brandA">
+            <span class="check"></span>
+          </label>
+        </div>
+        <div class="form-inline d-flex align-items-center py-1">
+          <label class="tick">Brand B
+            <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand B']" (change)="applyFilters()" name="brandB">
+            <span class="check"></span>
+          </label>
+        </div>
+        <div class="form-inline d-flex align-items-center py-1">
+          <label class="tick">Brand C
+            <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand C']" (change)="applyFilters()" name="brandC">
+            <span class="check"></span>
+          </label>
+        </div>
+        <div class="form-inline d-flex align-items-center py-1">
+          <label class="tick">Brand D
+            <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand D']" (change)="applyFilters()" name="brandD">
+            <span class="check"></span>
+          </label>
+        </div>
+        <div class="form-inline d-flex align-items-center py-1">
+          <label class="tick">Brand E
+            <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand E']" (change)="applyFilters()" name="brandE">
+            <span class="check"></span>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="py-3">
+
+    </div>
+  </div>
+  <div class="content py-md-0 py-3">
+    <section id="sidebar">
+      <div class="py-3">
+        <h5 class="font-weight-bold">Categories</h5>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+              >
+            T-Shirts <span class="badge badge-primary badge-pill">{{ getCategoryCount('Shirts') }}</span>
+          </li>
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+              >
+            Jeans <span class="badge badge-primary badge-pill">{{ getCategoryCount('Jeans') }}</span>
+          </li>
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+              >
+            Jackets <span class="badge badge-primary badge-pill">{{ getCategoryCount('Jackets') }}</span>
+          </li>
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+         >
+            Sneakers <span class="badge badge-primary badge-pill">{{ getCategoryCount('Sneakers') }}</span>
+          </li>
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+              >
+            Dresses <span class="badge badge-primary badge-pill">{{ getCategoryCount('Dresses') }}</span>
+          </li>
+          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category"
+              >
+            Accessories <span class="badge badge-primary badge-pill">{{ getCategoryCount('Accessories') }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="py-3">
+        <h5 class="font-weight-bold">Brands</h5>
+        <form class="brand">
+          <div class="form-inline d-flex align-items-center py-1">
+            <label class="tick">Brand A
+              <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand A']" (change)="applyFilters()" name="brandA">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="form-inline d-flex align-items-center py-1">
+            <label class="tick">Brand B
+              <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand B']" (change)="applyFilters()" name="brandB">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="form-inline d-flex align-items-center py-1">
+            <label class="tick">Brand C
+              <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand C']" (change)="applyFilters()" name="brandC">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="form-inline d-flex align-items-center py-1">
+            <label class="tick">Brand D
+              <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand D']" (change)="applyFilters()" name="brandD">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="form-inline d-flex align-items-center py-1">
+            <label class="tick">Brand E
+              <input type="checkbox" [(ngModel)]="searchCriteria.brands['Brand E']" (change)="applyFilters()" name="brandE">
+              <span class="check"></span>
+            </label>
+          </div>
+        </form>
+      </div>
+<!--      <div class="py-3">-->
+<!--        <h5 class="font-weight-bold">Rating</h5>-->
+<!--        <form class="rating">-->
+<!--          <div class="form-inline d-flex align-items-center py-2">-->
+<!--            <label class="tick">-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <input type="checkbox" [(ngModel)]="searchCriteria.ratings[5]" (change)="applyFilters()" name="rating5">-->
+<!--              <span class="check"></span>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="form-inline d-flex align-items-center py-2">-->
+<!--            <label class="tick">-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <input type="checkbox" [(ngModel)]="searchCriteria.ratings[4]" (change)="applyFilters()" name="rating4">-->
+<!--              <span class="check"></span>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="form-inline d-flex align-items-center py-2">-->
+<!--            <label class="tick">-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <input type="checkbox" [(ngModel)]="searchCriteria.ratings[3]" (change)="applyFilters()" name="rating3">-->
+<!--              <span class="check"></span>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="form-inline d-flex align-items-center py-2">-->
+<!--            <label class="tick">-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <input type="checkbox" [(ngModel)]="searchCriteria.ratings[2]" (change)="applyFilters()" name="rating2">-->
+<!--              <span class="check"></span>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="form-inline d-flex align-items-center py-2">-->
+<!--            <label class="tick">-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <i class="fa fa-star-o fa-1x"></i>-->
+<!--              <input type="checkbox" [(ngModel)]="searchCriteria.ratings[1]" (change)="applyFilters()" name="rating1">-->
+<!--              <span class="check"></span>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--      </div>-->
+    </section>
+    <section id="products">
+      <div class="container py-2" style="margin-right: 350px">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1" *ngFor="let item of pagedItems">
+            <div class="card">
+              <img class="card-img-top" [src]="item.imageUrl" alt="{{ item.name }}">
+              <div class="card-body">
+                <h6 class="font-weight-bold pt-1">{{ item.name }}</h6>
+                <div class="text-muted description">{{ item.description }}</div>
+                <div class="d-flex align-items-center product">
+                  <i class="fa fa-star gold-star " *ngFor="let star of getStarArray(item.reviews)" [ngClass]="{ 'far': star === 0 }"></i>
+                </div>
+                <div class="d-flex align-items-center justify-content-between pt-3">
+                  <div class="d-flex flex-column">
+                    <div class="h6 font-weight-bold">{{ item.price | currency }}</div>
+                  </div>
+                  <button class="btn btn-primary" (click)="viewDetails(item.id)">View Details</button>
+                  <button class="btn add-to-cart" (click)="addToCart(item.id)">Add to cart </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+          <button *ngFor="let page of totalPagesArray" (click)="goToPage(page)">{{ page }}</button>
+          <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+

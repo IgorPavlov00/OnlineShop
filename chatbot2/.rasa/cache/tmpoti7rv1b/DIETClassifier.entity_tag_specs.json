@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-max_price",
+      "2": "I-max_price",
+      "3": "L-max_price",
+      "4": "U-max_price",
+      "5": "B-min_price",
+      "6": "I-min_price",
+      "7": "L-min_price",
+      "8": "U-min_price",
+      "9": "B-product",
+      "10": "I-product",
+      "11": "L-product",
+      "12": "U-product",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-max_price": 1,
+      "I-max_price": 2,
+      "L-max_price": 3,
+      "U-max_price": 4,
+      "B-min_price": 5,
+      "I-min_price": 6,
+      "L-min_price": 7,
+      "U-min_price": 8,
+      "B-product": 9,
+      "I-product": 10,
+      "L-product": 11,
+      "U-product": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

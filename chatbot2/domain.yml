@@ -1,0 +1,49 @@
+version: "3.0"
+
+intents:
+  - greet
+  - ask_product_info
+  - confirm_order
+  - ask_product_by_price
+
+entities:
+  - product
+  - min_price
+  - max_price
+
+slots:
+  product:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: product
+
+  min_price:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: min_price
+
+  max_price:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: max_price
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_product_info:
+    - text: "{product_info}"
+
+  utter_order_confirmation:
+    - text: "Your order for {product} has been placed successfully!"
+
+actions:
+  - action_get_product_info
+  - action_order_confirmation
+  - action_get_product_by_price

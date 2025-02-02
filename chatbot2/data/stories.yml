@@ -1,0 +1,17 @@
+version: "3.0"
+
+stories:
+  - story: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: Provide product info
+    steps:
+      - intent: ask_product_info
+      - action: action_get_product_info
+
+  - story: Confirm product order
+    steps:
+      - intent: confirm_order
+      - action: action_order_confirmation

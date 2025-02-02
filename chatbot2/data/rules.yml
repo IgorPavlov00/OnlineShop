@@ -1,0 +1,22 @@
+version: "3.0"
+
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Provide product information
+    steps:
+      - intent: ask_product_info
+      - action: action_get_product_info
+
+  - rule: Confirm order
+    steps:
+      - intent: confirm_order
+      - action: action_order_confirmation
+
+  - rule: Provide products by price range
+    steps:
+      - intent: ask_product_by_price
+      - action: action_get_product_by_price
