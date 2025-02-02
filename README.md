@@ -23,6 +23,7 @@
 **Tools**  
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)  
 ![Angular Material](https://img.shields.io/badge/Angular_Material-3F51B5?style=flat&logo=angular&logoColor=white)  
+![image](https://github.com/user-attachments/assets/6370bdad-bccf-4007-95ef-195b243a6d10)
 
 ---
 
