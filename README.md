@@ -32,15 +32,13 @@
 ---
 
 ## 📸 Screenshots  
-| Login & Registration | Profile Management |  
-|-----------------------|---------------------|  
-| ![Login](https://github.com/user-attachments/assets/your-login-screenshot-path) | ![Profile](https://github.com/user-attachments/assets/your-profile-screenshot-path) |  
+| Login Page | Profile Page |  
+|------------|--------------|  
+| ![Login Page](https://github.com/user-attachments/assets/69a816de-f7fa-4448-bf48-9e5741c19fc1) | ![Profile Page](https://github.com/user-attachments/assets/79e27bf4-be30-4404-af4e-34bf97cea95e) |  
 
-| Product Page | Chatbot Interaction |  
-|--------------|---------------------|  
-| ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot Interface](https://github.com/user-attachments/assets/22d5d712-5846-4cbf-afed-b5a3ed45e2d5) |  
-
----
+| Product Page | Chatbot Interface |  
+|--------------|-------------------|  
+| ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot](https://github.com/user-attachments/assets/22d5d712-5846-4cbf-afed-b5a3ed45e2d5) |  
 
 ## 🏁 Getting Started  
 1. **Clone the repository**  
