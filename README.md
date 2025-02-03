@@ -48,7 +48,6 @@
 - Python 3.8+ (for Rasa chatbot)  
 
 ### Installation  
-1. Clone the repository:  
    ```bash  
    git clone https://github.com/your-username/online-shop-angular.git  
    cd online-shop-angular
