@@ -1,6 +1,6 @@
 # 🛍️ Online Shop - Angular  
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/.../deploy-status)](https://app.netlify.com/sites/onlineshop123/deploys)  
+ 
 *A lightweight e-commerce demo with Angular, user authentication, and an AI chatbot.*
 
 ---
@@ -24,7 +24,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)  
 ![Angular Material](https://img.shields.io/badge/Angular_Material-3F51B5?style=flat&logo=angular&logoColor=white)  
 
-
 ---
 
 ## 🚀 Demo  
@@ -39,7 +38,7 @@
 
 | Product Page | Chatbot Interaction |  
 |--------------|---------------------|  
-| ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot](https://github.com/user-attachments/assets/7fb673d5-0126-492a-b03e-1dd17af06550) |  
+| ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot Interface](https://github.com/user-attachments/assets/22d5d712-5846-4cbf-afed-b5a3ed45e2d5) |  
 
 ---
 
