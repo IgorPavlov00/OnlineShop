@@ -41,6 +41,16 @@
 | ![Product Page](https://github.com/user-attachments/assets/258ab8fa-572b-4137-a2a1-53edf4105013) | ![Chatbot](https://github.com/user-attachments/assets/22d5d712-5846-4cbf-afed-b5a3ed45e2d5) |  
 
 ## 🏁 Getting Started  
-1. **Clone the repository**  
+
+### Prerequisites  
+- Node.js v16+  
+- Angular CLI  
+- Python 3.8+ (for Rasa chatbot)  
+
+### Installation  
+1. Clone the repository:  
    ```bash  
    git clone https://github.com/your-username/online-shop-angular.git  
+   cd online-shop-angular
+   rasa run --enable-api --cors "*"
+   rasa run actions   
